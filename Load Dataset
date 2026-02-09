@@ -1,0 +1,8 @@
+print("Loading California Housing Dataset...")
+
+data = fetch_california_housing()
+
+df = pd.DataFrame(data.data, columns=data.feature_names)
+df["HousePrice"] = data.target
+
+print(df.head())
